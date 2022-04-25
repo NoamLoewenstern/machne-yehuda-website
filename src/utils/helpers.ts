@@ -19,5 +19,5 @@ export const isHourSameAs = (hourA: string, hourB: string) => {
   return +a[0] === +b[0] && +a[1] === +b[1];
 };
 
-export const isMobile = window.innerWidth <= 800;
+export const isMobile = window.innerWidth <= 500;
 export const isTablet = window.innerWidth <= 1000;
