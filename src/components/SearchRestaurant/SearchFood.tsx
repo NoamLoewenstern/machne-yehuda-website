@@ -12,7 +12,7 @@ import { resetSearchFilters, selectSearch } from '../../store/slices/searchSlice
 import RestaurantCard from './RestaurantCard';
 import Logo from '../Logo';
 import { restaurantsDataInfo } from '../../data/restaurants-info';
-import { isHourGreaterThan, isHourSameAs } from '../../utils/helpers';
+import { isHourGreaterThan, isHourSameAs, isMobile } from '../../utils/helpers';
 
 enum FILTERS_TYPE {
   CATEGORY = 'CATEGORY',
@@ -105,7 +105,8 @@ export default function SearchFood() {
       <Logo />
       <div className='SearchFood-Container'>
         <Paper className='SearchFoodCard' style={viewingRestaurants.length ? {} : { width: '80%' }}>
-          <Typography sx={{ m: 2, mb: 4, textAlign: 'center' }} variant='h2' color='primary'>
+          <Typography sx={{ m: 2, mb: 4, textAlign: 'center' }} variant={isMobile ? 'h4' : 'h3'} color='primary'>
+            {/* <Typography sx={{ m: 2, mb: 4, textAlign: 'center' }} variant={isMobile ? 'h4' : 'h3'} color='primary'> */}
             לחפש, למצוא, לאכול, ליהנות!
           </Typography>
           <Box sx={{ minHeight: '250px' }}>
@@ -148,9 +149,11 @@ export default function SearchFood() {
 
         {viewingRestaurants.length > 0 && (
           <div className='List-RestaurantCards'>
-            {viewingRestaurants.map(restaurant => (
-              <RestaurantCard key={restaurant.name} restaurant={restaurant} />
-            ))}
+            {viewingRestaurants
+              .sort((a, b) => a.waitingTime - b.waitingTime)
+              .map(restaurant => (
+                <RestaurantCard key={restaurant.name} restaurant={restaurant} />
+              ))}
           </div>
         )}
       </div>

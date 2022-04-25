@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    // color: #4d6cea;
+    // color: #ff92f0;
 
 }
 
@@ -57,7 +57,9 @@ body {
 
     display: flex;
     justify-content: space-between;
+    // align-items: center;
     align-items: flex-start;
+    // min-width: 100%;
     max-height: 96%;
 
     margin: 20px;
@@ -69,10 +71,12 @@ body {
         min-width: 30%;
         width: 50%;
         display: flex;
+        align-self: flex-start;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 20px;
+        margin: 0 10px;
 
 
         .Tabs {
@@ -93,6 +97,8 @@ body {
     .List-RestaurantCards {
         max-height: 100vh;
         overflow: auto;
+        margin: 0 4px;
+
         // overflow: hidden;
 
         .Restaurant-Card {
@@ -162,8 +168,32 @@ body {
     }
 }
 
-@media (max-width: 1000px) {
-    .SearchFoodCard {
-        width: 80%;
+@media (max-width: 800px) {
+
+    .SearchFood-Container {
+        flex-direction: column;
+
+        .SearchFoodCard {
+            width: 75%;
+
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+
+    .SearchFood-Container {
+        // flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .SearchFoodCard {
+            width: 90%;
+            align-self: center;
+            margin-bottom: 10px;
+
+            padding: 10px;
+        }
     }
 }

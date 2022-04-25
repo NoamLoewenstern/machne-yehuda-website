@@ -70,6 +70,7 @@ function RestaurantCard({ restaurant }: { restaurant: IRestaurantInfo }) {
                 label={restaurant.veganType}
               />
             )}
+            <Chip label={`${restaurant.waitingTime} דקות`} sx={{ fontSize: 16, backgroundColor: '#ff92f0' }} />
           </Stack>
           <Typography variant='body1' color='text.primary'>
             מחיר ממוצע: {restaurant.priceRange.avg}
