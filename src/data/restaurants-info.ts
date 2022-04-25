@@ -45,6 +45,7 @@ export interface IRestaurantInfo {
     logoUrl: string;
     menuUrls?: string[];
   };
+  waitingTime: number;
 }
 
 export const restaurantsDataInfo: IRestaurantInfo[] = [
@@ -98,6 +99,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
       logoUrl: `/static/stores/images/restaurants/פסטה בסטה/לוגו.jpg`,
       menuUrls: [`/static/stores/images/restaurants/פסטה בסטה/תפריט.jpg`],
     },
+    waitingTime: 23,
     website: {
       url: 'https://pastabasta.co.il',
     },
@@ -149,6 +151,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
       logoUrl: `/static/stores/images/restaurants/מוריס/לוגו.jpg`,
       menuUrls: [`/static/stores/images/restaurants/מוריס/תפריט.jpg`],
     },
+    waitingTime: 25,
     website: {
       url: '',
     },
@@ -206,6 +209,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
         `/static/stores/images/restaurants/חצות/תפריט קינוחים.png`,
       ],
     },
+    waitingTime: 14,
     website: {
       url: 'https://hatzot.co.il',
     },
@@ -263,6 +267,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
       logoUrl: `/static/stores/images/restaurants/מחניודה/לוגו.jpg`,
       menuUrls: [],
     },
+    waitingTime: 15,
     website: {
       url: 'https://www.machneyuda.co.il/',
     },
@@ -317,6 +322,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
       logoUrl: `/static/stores/images/restaurants/ג'וזף/לוגו.png`,
       menuUrls: [`/static/stores/images/restaurants/ג'וזף/תפריט.jpg`],
     },
+    waitingTime: 12,
     website: {
       url: 'https://josef-burger.co.il/',
     },
@@ -371,6 +377,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
       logoUrl: `/static/stores/images/restaurants/חצאפוריה/לוגו.png`,
       menuUrls: [`/static/stores/images/restaurants/חצאפוריה/תפריט.jpg`],
     },
+    waitingTime: 22,
     website: {
       url: '',
     },
@@ -422,6 +429,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
       logoUrl: `/static/stores/images/restaurants/מורדוך/לוגו.jpeg`,
       menuUrls: [`static/stores/images/restaurants/מורדוך/תפריט.jpeg`],
     },
+    waitingTime: 18,
     website: {
       url: 'https://www.morduch.com',
     },
@@ -473,6 +481,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
       logoUrl: `/static/stores/images/restaurants/עזורה/לוגו.jpg`,
       menuUrls: [`/static/stores/images/restaurants/עזורה/תפריט.jpeg`],
     },
+    waitingTime: 16,
     website: {
       url: '',
     },
@@ -524,6 +533,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
       logoUrl: `static/stores/images/restaurants/ארבעס/לוגו.jpg`,
       menuUrls: [`/static/stores/images/restaurants/ארבעס/תפריט.jpg`],
     },
+    waitingTime: 17,
     website: {
       url: '',
     },
@@ -575,6 +585,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
       logoUrl: `/static/stores/images/restaurants/ג'קו סטריט/לוגו.png`,
       menuUrls: [`/static/stores/images/restaurants/ג'קו סטריט/תפריט.jpg`],
     },
+    waitingTime: 11,
     website: {
       url: 'https://jackosstreet.co.il/',
     },
@@ -631,6 +642,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
         `/static/stores/images/bars/ביר בזאר/תפריט 2.jpeg`,
       ],
     },
+    waitingTime: 9,
     website: {
       url: '',
     },
@@ -688,6 +700,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
         `/static/stores/images/bars/פרדי למון/תפריט 3.jpeg`,
       ],
     },
+    waitingTime: 8,
     website: {
       url: '',
     },
@@ -741,6 +754,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
       logoUrl: `/static/stores/images/sweets/קוקי קרים/לוגו.png`,
       menuUrls: [`/static/stores/images/sweets/קוקי קרים/תפריט.jpeg`],
     },
+    waitingTime: 3,
     website: {
       url: 'https://www.cookiecream.co.il/',
     },
@@ -797,6 +811,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
         `/static/stores/images/sweets/אהרלה/תפריט ספיישל.jpeg`,
       ],
     },
+    waitingTime: 2,
     website: {
       url: 'https://www.aralecrepe.com/',
     },
@@ -849,6 +864,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
       logoUrl: `/static/stores/images/booths/פלאפל האחים לוי/לוגו.jpeg`,
       menuUrls: [`/static/stores/images/booths/פלאפל האחים לוי/תפריט.jpeg`],
     },
+    waitingTime: 5,
     website: {
       url: '',
     },
@@ -906,6 +922,7 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
       logoUrl: `/static/stores/images/booths/חכמת הבורקס מחיפה/לוגו.jpeg`,
       menuUrls: [`/static/stores/images/booths/חכמת הבורקס מחיפה/תפריט.jpeg`],
     },
+    waitingTime: 10,
     website: {
       url: '',
     },
