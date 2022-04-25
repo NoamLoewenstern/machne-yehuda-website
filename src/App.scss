@@ -3,21 +3,16 @@ body {
 }
 
 .App {
-    // text-align: center;
-    // height: 100%;
     height: 100vh;
     margin: 0;
     padding: 0;
-    /* Hide scrollbars */
     overflow: hidden;
-
     // color: #4d6cea;
 
 }
 
 
 .nav-bar {
-    //     // height: 00px;
     padding: 5px;
     margin: 0;
 }
@@ -26,7 +21,6 @@ body {
 
 
 .App-logo {
-    //     height: 40vmin;
     pointer-events: none;
     align-self: flex-start;
     border-radius: 50%;
@@ -48,15 +42,10 @@ body {
 
     width: 100vw;
 
-    // min-height: 100%;
-    // max-width: 100%;
-    // width: 100vw;
-
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
     direction: rtl;
     margin: 0px;
     padding: 0px 10px;
@@ -75,25 +64,16 @@ body {
 
 
     .SearchFoodCard {
-        // height: 200;
-        // border-radius: 2%;
-        // background-color: lightblue;
+        background-color: rgb(32, 32, 32);
         opacity: 80%;
         min-width: 30%;
         width: 50%;
-        // max-height: 60%;
-
-        // width: 100%;
         display: flex;
         flex-direction: column;
-        // flex-grow: 1;
-        // justify-content: center;
         align-items: center;
         justify-content: center;
-        // text-align: center;
-        // height: 100%;
         padding: 20px;
-        // flex-grow: 1;
+
 
         .Tabs {
             width: 100%;
@@ -131,29 +111,15 @@ body {
 
 
 .Restaurant-Page {
-    // background-image: url("https://cdn.exiteme.com/exitetogo/www.machne.co.il/gallery/sitepics/6FA72E34-E13E-C1C3-FB57-D36F7B09A090.jpg");
-
-    // background: url("https://cdn.exiteme.com/exitetogo/www.machne.co.il/gallery/sitepics/6FA72E34-E13E-C1C3-FB57-D36F7B09A090.jpg");
-    // background-image: url("https://cdn.exiteme.com/exitetogo/www.machne.co.il/gallery/sitepics/777C1457-680C-87B8-31CB-37F6F4BCA86C.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
-    // max-width: 100%;
-    // min-height: 100vh;
     height: 100vh;
 
-    // height: 100%;
-    // width: 100%;
-    // margin: auto;
-
-    // min-width: 800px;
-    // height: 100%;
-    // width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
     direction: rtl;
     margin: 10px;
     padding: 0px 10px;
@@ -167,9 +133,6 @@ body {
     }
 
     .Restaurant-Page-Content {
-        // height: 200;
-        // border-radius: 2%;
-        // background-color: lightblue;
         opacity: 80%;
         width: 70%;
         min-width: 600px;
@@ -177,12 +140,8 @@ body {
         // width: 100%;
         display: flex;
         flex-direction: column;
-        // justify-content: center;
         align-items: center;
-        // height: 100%;
         padding: 20px;
-        // margin: 20px;
-        // flex-grow: 1;
 
     }
 }
@@ -208,7 +167,3 @@ body {
         width: 80%;
     }
 }
-
-// button {
-//     font-size: calc(10px + 2vmin);
-// }
