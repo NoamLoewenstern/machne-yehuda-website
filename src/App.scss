@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+}
+
+.App {
+    // text-align: center;
+    // height: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* Hide scrollbars */
+    overflow: hidden;
+
+    // color: #4d6cea;
+
+}
+
+
+.nav-bar {
+    //     // height: 00px;
+    padding: 5px;
+    margin: 0;
+}
+
+
+
+
+.App-logo {
+    //     height: 40vmin;
+    pointer-events: none;
+    align-self: flex-start;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+
+
+}
+
+.App-header {
+    background-image: url("https://cdn.exiteme.com/exitetogo/www.machne.co.il/gallery/sitepics/6FA72E34-E13E-C1C3-FB57-D36F7B09A090.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 100vh;
+    height: 100vh;
+
+    width: 100vw;
+
+    // min-height: 100%;
+    // max-width: 100%;
+    // width: 100vw;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    direction: rtl;
+    margin: 0px;
+    padding: 0px 10px;
+    font-size: calc(18px + 2vmin);
+    color: white;
+}
+
+.SearchFood-Container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-height: 96%;
+
+    margin: 20px;
+
+
+    .SearchFoodCard {
+        // height: 200;
+        // border-radius: 2%;
+        // background-color: lightblue;
+        opacity: 80%;
+        min-width: 30%;
+        width: 50%;
+        // max-height: 60%;
+
+        // width: 100%;
+        display: flex;
+        flex-direction: column;
+        // flex-grow: 1;
+        // justify-content: center;
+        align-items: center;
+        justify-content: center;
+        // text-align: center;
+        // height: 100%;
+        padding: 20px;
+        // flex-grow: 1;
+
+        .Tabs {
+            width: 100%;
+            border: 2px solid white;
+            display: flex;
+            justify-content: space-between;
+
+
+            .Tab {
+                flex-grow: 1;
+                font-size: .5em;
+            }
+        }
+    }
+
+
+    .List-RestaurantCards {
+        max-height: 100vh;
+        overflow: auto;
+        // overflow: hidden;
+
+        .Restaurant-Card {
+            min-width: 40%;
+            margin-bottom: 15px
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+}
+
+
+
+
+.Restaurant-Page {
+    // background-image: url("https://cdn.exiteme.com/exitetogo/www.machne.co.il/gallery/sitepics/6FA72E34-E13E-C1C3-FB57-D36F7B09A090.jpg");
+
+    // background: url("https://cdn.exiteme.com/exitetogo/www.machne.co.il/gallery/sitepics/6FA72E34-E13E-C1C3-FB57-D36F7B09A090.jpg");
+    // background-image: url("https://cdn.exiteme.com/exitetogo/www.machne.co.il/gallery/sitepics/777C1457-680C-87B8-31CB-37F6F4BCA86C.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // max-width: 100%;
+    // min-height: 100vh;
+    height: 100vh;
+
+    // height: 100%;
+    // width: 100%;
+    // margin: auto;
+
+    // min-width: 800px;
+    // height: 100%;
+    // width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    direction: rtl;
+    margin: 10px;
+    padding: 0px 10px;
+    font-size: calc(18px + 2vmin);
+    color: white;
+
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .Restaurant-Page-Content {
+        // height: 200;
+        // border-radius: 2%;
+        // background-color: lightblue;
+        opacity: 80%;
+        width: 70%;
+        min-width: 600px;
+        max-width: 100%;
+        // width: 100%;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        // height: 100%;
+        padding: 20px;
+        // margin: 20px;
+        // flex-grow: 1;
+
+    }
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1000px) {
+    .SearchFoodCard {
+        width: 80%;
+    }
+}
+
+// button {
+//     font-size: calc(10px + 2vmin);
+// }

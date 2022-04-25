@@ -1,0 +1,34 @@
+{
+  "name": "machne-yehuda",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.6.1",
+    "@mui/material": "^5.6.1",
+    "@mui/x-date-pickers": "^5.0.0-alpha.1",
+    "@reduxjs/toolkit": "^1.8.1",
+    "date-fns": "^2.28.0",
+    "date-fns-jalali": "^2.28.0-0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-redux": "^8.0.1",
+    "react-router-dom": "^6.3.0",
+    "stylis": "^4.1.0",
+    "stylis-plugin-rtl": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "sass": "^1.50.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.2"
+  }
+}
