@@ -2,18 +2,13 @@ import Box from '@mui/material/Box';
 import { useMemo } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { getRestaurantByName, weekDaysInHebrew } from '../../data/restaurants-info';
-import Logo from '../Logo';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { IRestaurantInfo, RestaurantCategories, restaurantsDataInfo } from '../../data/restaurants-info';
-import CardHeader from '@mui/material/CardHeader';
-import Avatar from '@mui/material/Avatar';
-import CardActionArea from '@mui/material/CardActionArea';
-import { useNavigate } from 'react-router-dom';
+import { RestaurantCategories } from '../../data/restaurants-info';
 import Paper from '@mui/material/Paper';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
@@ -25,6 +20,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import Logo from '../Logo';
 
 const RestaurantToHebrew = {
   [RestaurantCategories.Resturants]: 'מסעדה',
@@ -48,13 +44,9 @@ function Restaurant() {
   return (
     <>
       <header className='App-header' style={{ backgroundImage }}>
-        <img
-          height={100}
-          src={restaurant?.static.logoUrl}
-          className='App-logo'
-          alt='logo'
-          style={{ position: 'absolute' }}
-        />
+        <Logo />
+
+        <img height={100} src={restaurant?.static.logoUrl} className='Resturant-Logo-Img' alt='logo' />
 
         <Box className='Restaurant-Page'>
           <Paper variant='outlined' className='Restaurant-Page-Content' elevation={16}>

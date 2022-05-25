@@ -692,7 +692,9 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
     },
 
     static: {
-      imagesUrl: [],
+      imagesUrl: [
+        `https://lh3.googleusercontent.com/places/AAcXr8pJqh9C2fUcF5wwdgCFEoUy_EuqbZz4f_D7WBYpvkBFW3uwiHBHfAftXSwQ6nSgeGYHAkzm82cZtndCqAsUpT9zJdsZXXr9fcc=s1600-w1280-h1280`,
+      ],
       logoUrl: `/static/stores/images/bars/פרדי למון/לוגו.jpg`,
       menuUrls: [
         `/static/stores/images/bars/פרדי למון/תפריט.jpeg`,
@@ -804,7 +806,9 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
     },
 
     static: {
-      imagesUrl: [],
+      imagesUrl: [
+        `https://static.wixstatic.com/media/0e37f5_7f898ee7bd6b40bbb17781f451668121~mv2.jpeg/v1/fill/w_980,h_853,q_85,usm_0.66_1.00_0.01/0e37f5_7f898ee7bd6b40bbb17781f451668121~mv2.jpeg`,
+      ],
       logoUrl: `/static/stores/images/sweets/אהרלה/לוגו.jpeg`,
       menuUrls: [
         `/static/stores/images/sweets/אהרלה/תפריט.jpeg`,

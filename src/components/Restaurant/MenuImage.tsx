@@ -9,11 +9,11 @@ function MenuImage() {
 
   if (!menuImages.length) return <Navigate to={`/${restaurant?.name}` || '/'} />;
   return (
-    <>
+    <div className='Menu-Images'>
       {menuImages.map(menuUrl => (
         <img key={menuUrl} src={menuUrl} />
       ))}
-    </>
+    </div>
   );
 }
 
