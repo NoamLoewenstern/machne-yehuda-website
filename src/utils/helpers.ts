@@ -21,3 +21,5 @@ export const isHourSameAs = (hourA: string, hourB: string) => {
 
 export const isMobile = window.innerWidth <= 500;
 export const isTablet = window.innerWidth <= 1000;
+
+export const BaseURL = import.meta.env.BASE_URL.slice(0, -1) || '';

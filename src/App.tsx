@@ -9,6 +9,7 @@ import { cacheRtl, theme } from './Theme';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Restaurant from './components/Restaurant/Restaurant';
 import MenuImage from './components/Restaurant/MenuImage';
+import { BaseURL } from './utils/helpers';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <div className='App' dir='rtl'>
           <Provider store={store}>
-            <BrowserRouter basename={import.meta.env.BASE_URL.slice(0, -1) || ''}>
+            <BrowserRouter basename={BaseURL}>
               <Routes>
                 <Route path='/' element={<SearchFood />} />
                 <Route path='/menus/:restaurantName' element={<MenuImage />} />
