@@ -7,7 +7,7 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd());
   return {
     // base: `/${env.REP}/`,
-    // base: `/machne-yehuda-website/`,
+    base: env.VITE_REPO_NAME,
     plugins: [react()],
   };
 });

@@ -9,7 +9,6 @@ import { cacheRtl, theme } from './Theme';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Restaurant from './components/Restaurant/Restaurant';
 import MenuImage from './components/Restaurant/MenuImage';
-import Logo from './components/Logo';
 
 function App() {
   return (
@@ -17,7 +16,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <div className='App' dir='rtl'>
           <Provider store={store}>
-            <BrowserRouter>
+            <BrowserRouter basename={import.meta.env.BASE_URL.slice(0, -1) || ''}>
               <Routes>
                 <Route path='/' element={<SearchFood />} />
                 <Route path='/menus/:restaurantName' element={<MenuImage />} />
@@ -32,3 +31,6 @@ function App() {
 }
 
 export default App;
+function createBrowserHistory(arg0: { basename: string }) {
+  throw new Error('Function not implemented.');
+}
