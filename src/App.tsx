@@ -26,7 +26,7 @@ const router = createBrowserRouter(
       element: <MenuImage />,
     },
   ],
-  { basename: baseURLName },
+  { basename: baseURLName ? `/${baseURLName}/` : '/' },
 );
 
 function App() {
