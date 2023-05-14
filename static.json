@@ -3,6 +3,7 @@
   "routes": {
     "/assets/*": "/assets/",
     "/static/*": "/static/",
+    "/menus/*": "/menus/",
     "/**": "index.html"
   }
 }
