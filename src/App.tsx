@@ -6,10 +6,28 @@ import SearchFood from './components/SearchRestaurant/SearchFood';
 import { CacheProvider } from '@emotion/react';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import { cacheRtl, theme } from './Theme';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Restaurant from './components/Restaurant/Restaurant';
 import MenuImage from './components/Restaurant/MenuImage';
-import { BaseURLPath } from './utils/config';
+import { baseURLName } from './utils/config';
+
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <SearchFood />,
+    },
+    {
+      path: '/:restaurantName',
+      element: <Restaurant />,
+    },
+    {
+      path: '/menus/:restaurantName',
+      element: <MenuImage />,
+    },
+  ],
+  { basename: baseURLName },
+);
 
 function App() {
   return (
@@ -17,13 +35,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <div className='App' dir='rtl'>
           <Provider store={store}>
-            <BrowserRouter basename={BaseURLPath}>
-              <Routes>
-                <Route path='/' element={<SearchFood />} />
-                <Route path='/menus/:restaurantName' element={<MenuImage />} />
-                <Route path='/:restaurantName' element={<Restaurant />} />
-              </Routes>
-            </BrowserRouter>
+            <RouterProvider router={router} />
           </Provider>
         </div>
       </ThemeProvider>

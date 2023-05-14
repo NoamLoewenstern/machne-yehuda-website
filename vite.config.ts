@@ -2,16 +2,16 @@ import { defineConfig, loadEnv } from 'vite';
 
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd());
-  if (typeof env.VITE_BASE_URL_PATH === undefined) {
+  const viteBaseUrlName = env.VITE_BASE_URL_NAME;
+  if (typeof viteBaseUrlName === undefined) {
     throw new Error(
-      'VITE_BASE_URL_PATH is undefined. Please check .env file. necessary for sub-route in github-pages.',
+      'VITE_BASE_URL_NAME is undefined. Please check .env file. necessary for sub-route in github-pages.',
     );
   }
   return {
-    base: env.VITE_BASE_URL_PATH || '/',
+    base: viteBaseUrlName ? `/${viteBaseUrlName}/` : '/',
     plugins: [react()],
   };
 });

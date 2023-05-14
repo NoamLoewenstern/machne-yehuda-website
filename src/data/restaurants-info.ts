@@ -1,4 +1,10 @@
-import { BaseURLPath } from '../utils/config';
+import { baseURLName } from '../utils/config';
+import { trimChar } from '../utils/helpers';
+const baseUrl = baseURLName.length > 0 ? '/' + trimChar(baseURLName, '/') : '';
+
+function getImageUrl(staticImagePath: string) {
+  return `${baseUrl}/${staticImagePath}`;
+}
 
 export enum RestaurantCategories {
   Resturants = 'Resturants',
@@ -97,9 +103,9 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
     },
 
     static: {
-      imagesUrl: [`${BaseURLPath}/static/stores/images/restaurants/פסטה בסטה/פסטה בסטה.jpg`],
-      logoUrl: `${BaseURLPath}/static/stores/images/restaurants/פסטה בסטה/לוגו.jpg`,
-      menuUrls: [`${BaseURLPath}/static/stores/images/restaurants/פסטה בסטה/תפריט.jpg`],
+      imagesUrl: [getImageUrl(`static/stores/images/restaurants/פסטה בסטה/פסטה בסטה.jpg`)],
+      logoUrl: getImageUrl(`static/stores/images/restaurants/פסטה בסטה/לוגו.jpg`),
+      menuUrls: [getImageUrl(`static/stores/images/restaurants/פסטה בסטה/תפריט.jpg`)],
     },
     waitingTime: 23,
     website: {
@@ -149,9 +155,9 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
     },
 
     static: {
-      imagesUrl: [`${BaseURLPath}/static/stores/images/restaurants/מוריס/מסעדת מוריס.webp`],
-      logoUrl: `${BaseURLPath}/static/stores/images/restaurants/מוריס/לוגו.jpg`,
-      menuUrls: [`${BaseURLPath}/static/stores/images/restaurants/מוריס/תפריט.jpg`],
+      imagesUrl: [getImageUrl(`static/stores/images/restaurants/מוריס/מסעדת מוריס.webp`)],
+      logoUrl: getImageUrl(`static/stores/images/restaurants/מוריס/לוגו.jpg`),
+      menuUrls: [getImageUrl(`static/stores/images/restaurants/מוריס/תפריט.jpg`)],
     },
     waitingTime: 25,
     website: {
@@ -204,11 +210,11 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
     },
 
     static: {
-      imagesUrl: [`${BaseURLPath}/static/stores/images/restaurants/חצות/חצות.jpg`],
-      logoUrl: `${BaseURLPath}/static/stores/images/restaurants/חצות/לוגו.png`,
+      imagesUrl: [getImageUrl(`static/stores/images/restaurants/חצות/חצות.jpg`)],
+      logoUrl: getImageUrl(`static/stores/images/restaurants/חצות/לוגו.png`),
       menuUrls: [
-        `${BaseURLPath}/static/stores/images/restaurants/חצות/תפריט.jpg`,
-        `${BaseURLPath}/static/stores/images/restaurants/חצות/תפריט קינוחים.png`,
+        getImageUrl(`static/stores/images/restaurants/חצות/תפריט.jpg`),
+        getImageUrl(`static/stores/images/restaurants/חצות/תפריט קינוחים.png`),
       ],
     },
     waitingTime: 14,
@@ -263,10 +269,10 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
 
     static: {
       imagesUrl: [
-        `${BaseURLPath}/static/stores/images/restaurants/מחניודה/מחניודה.jpg`,
-        `${BaseURLPath}/static/stores/images/restaurants/מחניודה/מחנה יהודה.jpg`,
+        getImageUrl(`static/stores/images/restaurants/מחניודה/מחניודה.jpg`),
+        getImageUrl(`static/stores/images/restaurants/מחניודה/מחנה יהודה.jpg`),
       ],
-      logoUrl: `${BaseURLPath}/static/stores/images/restaurants/מחניודה/לוגו.jpg`,
+      logoUrl: getImageUrl(`static/stores/images/restaurants/מחניודה/לוגו.jpg`),
       menuUrls: [],
     },
     waitingTime: 15,
@@ -320,9 +326,9 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
     },
 
     static: {
-      imagesUrl: [`${BaseURLPath}/static/stores/images/restaurants/ג'וזף/ג'וזף.jpg`],
-      logoUrl: `${BaseURLPath}/static/stores/images/restaurants/ג'וזף/לוגו.png`,
-      menuUrls: [`${BaseURLPath}/static/stores/images/restaurants/ג'וזף/תפריט.jpg`],
+      imagesUrl: [getImageUrl(`static/stores/images/restaurants/ג'וזף/ג'וזף.jpg`)],
+      logoUrl: getImageUrl(`static/stores/images/restaurants/ג'וזף/לוגו.png`),
+      menuUrls: [getImageUrl(`static/stores/images/restaurants/ג'וזף/תפריט.jpg`)],
     },
     waitingTime: 12,
     website: {
@@ -373,11 +379,11 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
 
     static: {
       imagesUrl: [
-        `${BaseURLPath}/static/stores/images/restaurants/חצאפוריה/חצ'פוריה.jpg`,
-        `${BaseURLPath}/static/stores/images/restaurants/חצאפוריה/חצ'פורי.jpg`,
+        getImageUrl(`static/stores/images/restaurants/חצאפוריה/חצ'פוריה.jpg`),
+        getImageUrl(`static/stores/images/restaurants/חצאפוריה/חצ'פורי.jpg`),
       ],
-      logoUrl: `${BaseURLPath}/static/stores/images/restaurants/חצאפוריה/לוגו.png`,
-      menuUrls: [`${BaseURLPath}/static/stores/images/restaurants/חצאפוריה/תפריט.jpg`],
+      logoUrl: getImageUrl(`static/stores/images/restaurants/חצאפוריה/לוגו.png`),
+      menuUrls: [getImageUrl(`static/stores/images/restaurants/חצאפוריה/תפריט.jpg`)],
     },
     waitingTime: 22,
     website: {
@@ -427,8 +433,8 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
     },
 
     static: {
-      imagesUrl: [`${BaseURLPath}/static/stores/images/restaurants/מורדוך/מורדרוך.jpg`],
-      logoUrl: `${BaseURLPath}/static/stores/images/restaurants/מורדוך/לוגו.jpeg`,
+      imagesUrl: [getImageUrl(`static/stores/images/restaurants/מורדוך/מורדרוך.jpg`)],
+      logoUrl: getImageUrl(`static/stores/images/restaurants/מורדוך/לוגו.jpeg`),
       menuUrls: [`static/stores/images/restaurants/מורדוך/תפריט.jpeg`],
     },
     waitingTime: 18,
@@ -479,9 +485,9 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
     },
 
     static: {
-      imagesUrl: [`${BaseURLPath}/static/stores/images/restaurants/עזורה/עזורה.jpg`],
-      logoUrl: `${BaseURLPath}/static/stores/images/restaurants/עזורה/לוגו.jpg`,
-      menuUrls: [`${BaseURLPath}/static/stores/images/restaurants/עזורה/תפריט.jpeg`],
+      imagesUrl: [getImageUrl(`static/stores/images/restaurants/עזורה/עזורה.jpg`)],
+      logoUrl: getImageUrl(`static/stores/images/restaurants/עזורה/לוגו.jpg`),
+      menuUrls: [getImageUrl(`static/stores/images/restaurants/עזורה/תפריט.jpeg`)],
     },
     waitingTime: 16,
     website: {
@@ -531,9 +537,9 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
     },
 
     static: {
-      imagesUrl: [`${BaseURLPath}/static/stores/images/restaurants/ארבעס/ארבעס.jpg`],
+      imagesUrl: [getImageUrl(`static/stores/images/restaurants/ארבעס/ארבעס.jpg`)],
       logoUrl: `static/stores/images/restaurants/ארבעס/לוגו.jpg`,
-      menuUrls: [`${BaseURLPath}/static/stores/images/restaurants/ארבעס/תפריט.jpg`],
+      menuUrls: [getImageUrl(`static/stores/images/restaurants/ארבעס/תפריט.jpg`)],
     },
     waitingTime: 17,
     website: {
@@ -583,9 +589,9 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
     },
 
     static: {
-      imagesUrl: [`${BaseURLPath}/static/stores/images/restaurants/ג'קו סטריט/ג'קו סטריט.jpg`],
-      logoUrl: `${BaseURLPath}/static/stores/images/restaurants/ג'קו סטריט/לוגו.png`,
-      menuUrls: [`${BaseURLPath}/static/stores/images/restaurants/ג'קו סטריט/תפריט.jpg`],
+      imagesUrl: [getImageUrl(`static/stores/images/restaurants/ג'קו סטריט/ג'קו סטריט.jpg`)],
+      logoUrl: getImageUrl(`static/stores/images/restaurants/ג'קו סטריט/לוגו.png`),
+      menuUrls: [getImageUrl(`static/stores/images/restaurants/ג'קו סטריט/תפריט.jpg`)],
     },
     waitingTime: 11,
     website: {
@@ -637,11 +643,11 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
     },
 
     static: {
-      imagesUrl: [`${BaseURLPath}/static/stores/images/bars/ביר בזאר/ביר בזאר.jpg`],
-      logoUrl: `${BaseURLPath}/static/stores/images/bars/ביר בזאר/לוגו.jpg`,
+      imagesUrl: [getImageUrl(`static/stores/images/bars/ביר בזאר/ביר בזאר.jpg`)],
+      logoUrl: getImageUrl(`static/stores/images/bars/ביר בזאר/לוגו.jpg`),
       menuUrls: [
-        `${BaseURLPath}/static/stores/images/bars/ביר בזאר/תפריט 1.jpeg`,
-        `${BaseURLPath}/static/stores/images/bars/ביר בזאר/תפריט 2.jpeg`,
+        getImageUrl(`static/stores/images/bars/ביר בזאר/תפריט 1.jpeg`),
+        getImageUrl(`static/stores/images/bars/ביר בזאר/תפריט 2.jpeg`),
       ],
     },
     waitingTime: 9,
@@ -697,11 +703,11 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
       imagesUrl: [
         `https://lh3.googleusercontent.com/places/AAcXr8pJqh9C2fUcF5wwdgCFEoUy_EuqbZz4f_D7WBYpvkBFW3uwiHBHfAftXSwQ6nSgeGYHAkzm82cZtndCqAsUpT9zJdsZXXr9fcc=s1600-w1280-h1280`,
       ],
-      logoUrl: `${BaseURLPath}/static/stores/images/bars/פרדי למון/לוגו.jpg`,
+      logoUrl: getImageUrl(`static/stores/images/bars/פרדי למון/לוגו.jpg`),
       menuUrls: [
-        `${BaseURLPath}/static/stores/images/bars/פרדי למון/תפריט.jpeg`,
-        `${BaseURLPath}/static/stores/images/bars/פרדי למון/תפריט 2.jpeg`,
-        `${BaseURLPath}/static/stores/images/bars/פרדי למון/תפריט 3.jpeg`,
+        getImageUrl(`static/stores/images/bars/פרדי למון/תפריט.jpeg`),
+        getImageUrl(`static/stores/images/bars/פרדי למון/תפריט 2.jpeg`),
+        getImageUrl(`static/stores/images/bars/פרדי למון/תפריט 3.jpeg`),
       ],
     },
     waitingTime: 8,
@@ -754,9 +760,9 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
     },
 
     static: {
-      imagesUrl: [`${BaseURLPath}/static/stores/images/sweets/קוקי קרים/קוקי קרים.jpeg`],
-      logoUrl: `${BaseURLPath}/static/stores/images/sweets/קוקי קרים/לוגו.png`,
-      menuUrls: [`${BaseURLPath}/static/stores/images/sweets/קוקי קרים/תפריט.jpeg`],
+      imagesUrl: [getImageUrl(`static/stores/images/sweets/קוקי קרים/קוקי קרים.jpeg`)],
+      logoUrl: getImageUrl(`static/stores/images/sweets/קוקי קרים/לוגו.png`),
+      menuUrls: [getImageUrl(`static/stores/images/sweets/קוקי קרים/תפריט.jpeg`)],
     },
     waitingTime: 3,
     website: {
@@ -811,10 +817,10 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
       imagesUrl: [
         `https://static.wixstatic.com/media/0e37f5_7f898ee7bd6b40bbb17781f451668121~mv2.jpeg/v1/fill/w_980,h_853,q_85,usm_0.66_1.00_0.01/0e37f5_7f898ee7bd6b40bbb17781f451668121~mv2.jpeg`,
       ],
-      logoUrl: `${BaseURLPath}/static/stores/images/sweets/אהרלה/לוגו.jpeg`,
+      logoUrl: getImageUrl(`static/stores/images/sweets/אהרלה/לוגו.jpeg`),
       menuUrls: [
-        `${BaseURLPath}/static/stores/images/sweets/אהרלה/תפריט.jpeg`,
-        `${BaseURLPath}/static/stores/images/sweets/אהרלה/תפריט ספיישל.jpeg`,
+        getImageUrl(`static/stores/images/sweets/אהרלה/תפריט.jpeg`),
+        getImageUrl(`static/stores/images/sweets/אהרלה/תפריט ספיישל.jpeg`),
       ],
     },
     waitingTime: 2,
@@ -864,11 +870,11 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
 
     static: {
       imagesUrl: [
-        `${BaseURLPath}/static/stores/images/booths/פלאפל האחים לוי/האחים לוי.jpg`,
-        `${BaseURLPath}/static/stores/images/booths/פלאפל האחים לוי/האחים לוי 2.jpg`,
+        getImageUrl(`static/stores/images/booths/פלאפל האחים לוי/האחים לוי.jpg`),
+        getImageUrl(`static/stores/images/booths/פלאפל האחים לוי/האחים לוי 2.jpg`),
       ],
-      logoUrl: `${BaseURLPath}/static/stores/images/booths/פלאפל האחים לוי/לוגו.jpeg`,
-      menuUrls: [`${BaseURLPath}/static/stores/images/booths/פלאפל האחים לוי/תפריט.jpeg`],
+      logoUrl: getImageUrl(`static/stores/images/booths/פלאפל האחים לוי/לוגו.jpeg`),
+      menuUrls: [getImageUrl(`static/stores/images/booths/פלאפל האחים לוי/תפריט.jpeg`)],
     },
     waitingTime: 5,
     website: {
@@ -922,11 +928,11 @@ export const restaurantsDataInfo: IRestaurantInfo[] = [
 
     static: {
       imagesUrl: [
-        `${BaseURLPath}/static/stores/images/booths/חכמת הבורקס מחיפה/חכמת הבורקס מחיפה.jpg`,
-        `${BaseURLPath}/static/stores/images/booths/חכמת הבורקס מחיפה/חכמת הבורקס מחיפה.jpeg`,
+        getImageUrl(`static/stores/images/booths/חכמת הבורקס מחיפה/חכמת הבורקס מחיפה.jpg`),
+        getImageUrl(`static/stores/images/booths/חכמת הבורקס מחיפה/חכמת הבורקס מחיפה.jpeg`),
       ],
-      logoUrl: `${BaseURLPath}/static/stores/images/booths/חכמת הבורקס מחיפה/לוגו.jpeg`,
-      menuUrls: [`${BaseURLPath}/static/stores/images/booths/חכמת הבורקס מחיפה/תפריט.jpeg`],
+      logoUrl: getImageUrl(`static/stores/images/booths/חכמת הבורקס מחיפה/לוגו.jpeg`),
+      menuUrls: [getImageUrl(`static/stores/images/booths/חכמת הבורקס מחיפה/תפריט.jpeg`)],
     },
     waitingTime: 10,
     website: {
