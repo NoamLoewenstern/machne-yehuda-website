@@ -21,6 +21,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Logo from '../Logo';
+import { BaseURLPath } from '../../utils/config';
 
 const RestaurantToHebrew = {
   [RestaurantCategories.Resturants]: 'מסעדה',
@@ -130,7 +131,7 @@ function Restaurant() {
 
               <CardActions>
                 {(restaurant?.static.menuUrls?.length || 0) > 0 && (
-                  <Button size='large' href={`/menus/${restaurant.name}`} target='_blank'>
+                  <Button size='large' href={`${BaseURLPath}/menus/${restaurant.name}`} target='_blank'>
                     תפריט
                   </Button>
                 )}
