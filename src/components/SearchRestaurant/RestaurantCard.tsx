@@ -40,7 +40,7 @@ function RestaurantCard({ restaurant }: { restaurant: IRestaurantInfo }) {
 
   return (
     <Card sx={{ minWidth: 300, maxWidth: 600 }} className='Restaurant-Card'>
-      <CardActionArea component={RouterLink} to={`/${restaurant.name}`}>
+      <CardActionArea component={RouterLink} to={`/?view=restaurant&restaurantName=${restaurant.name}`}>
         <CardHeader
           avatar={<Avatar src={restaurant.static.logoUrl}></Avatar>}
           titleTypographyProps={{ variant: 'h5' }}
@@ -86,7 +86,7 @@ function RestaurantCard({ restaurant }: { restaurant: IRestaurantInfo }) {
       </CardActionArea>
 
       <CardActions>
-        <Button size='large' onClick={() => navigate(`/${restaurant.name}`)}>
+        <Button size='large' onClick={() => navigate(`/?view=${restaurant.name}`)}>
           פרטים
         </Button>
         {restaurant.website?.url ? <Button size='large'>לאתר המסעדה</Button> : ''}

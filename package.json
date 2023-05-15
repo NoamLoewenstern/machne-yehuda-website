@@ -1,5 +1,6 @@
 {
-  "name": "machne-yehuda",
+  "name": "machne-yehuda-website",
+  "homepage": "https://noamloewenstern.github.io/machne-yehuda-website/",
   "private": true,
   "version": "0.0.1",
   "scripts": {

@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import { useMemo } from 'react';
-import { Navigate, useParams } from 'react-router-dom';
+import { Navigate, useParams, useSearchParams } from 'react-router-dom';
 import { getRestaurantByName, weekDaysInHebrew } from '../../data/restaurants-info';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -31,9 +31,14 @@ const RestaurantToHebrew = {
 };
 
 function Restaurant() {
-  const { restaurantName = '' } = useParams();
+  const [searchParams] = useSearchParams();
+  const restaurantName = searchParams.get('restaurantName') || '';
 
   const restaurant = useMemo(() => getRestaurantByName(restaurantName), [restaurantName]);
+
+  if (!restaurantName || !restaurant) {
+    return <Navigate to='/' replace />;
+  }
 
   // const backgroundImages = restaurant?.static.imagesUrl.map(url => `url("${url}")`).join(', ');
   const url = restaurant?.static.imagesUrl[0];
@@ -130,7 +135,7 @@ function Restaurant() {
 
               <CardActions>
                 {(restaurant?.static.menuUrls?.length || 0) > 0 && (
-                  <Button size='large' href={`menus/${restaurant.name}`} target='_blank'>
+                  <Button size='large' href={`/?view=menu&restaurantName=${restaurant.name}`} target='_blank'>
                     תפריט
                   </Button>
                 )}
